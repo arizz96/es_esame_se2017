@@ -10,7 +10,7 @@ const app = express();
 app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGODB_URL, { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 var port = process.env.PORT || 8080;
 
